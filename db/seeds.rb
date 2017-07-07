@@ -9,11 +9,9 @@ Product.destroy_all
 Review.destroy_all
 
 
-15.times do |index|
-  product = Product.create!(name: Faker::Ancient.primordial, price: Faker::Number.decimal(2), description: Faker::Company.bs)
+12.times do |index|
+  product = Product.create!(name: Faker::Food.spice + " " + Faker::Music.unique.instrument, price: Faker::Number.decimal(2), description: Faker::Company.bs)
     3.times do |index|
       product.reviews.create(author: Faker::Name.name, content: Faker::ChuckNorris.fact, rating: Faker::Number.between(1,5))
     end
 end
-
-p "created #{Review.count} products"
