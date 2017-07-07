@@ -1,0 +1,23 @@
+<h2><%= @product.name %></h2>
+<h4>Price: $<%= @product.price %></h4>
+<h4>Description: <%= @product.description %></h4>
+
+<% if @product.reviews.any? %>
+
+<h4>Customer Reviews:</h4>
+  <ul>
+    <% @product.reviews.each do |review| %>
+      <li>
+        <%= review.author %>,
+        <%= review.content %>
+        <%= review.rating %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no reviews yet!</p>
+<% end %>
+<%= link_to "Edit Product", edit_product_path(@product) %> |
+<%= link_to "Delete Product", product_path(@product),
+                         :data => {:confirm => "Confirm delete!",
+                                   :method => "delete"} %>

@@ -1,0 +1,12 @@
+<%= render('layouts/errors', :object => @product) %>
+
+<div class="row">
+  <div class="col-xs-6">
+    <%= bootstrap_form_for @product do |f| %>
+      <%= f.text_field :name, hide_label: true, placeholder: "Product Name" %>
+      <%= f.text_area :description, hide_label: true, placeholder: "Product Description" %>
+      <%= f.text_field :price, hide_label: true, placeholder: "Product Price" %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

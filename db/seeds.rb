@@ -10,7 +10,7 @@ Review.destroy_all
 
 
 12.times do |index|
-  product = Product.create!(name: Faker::Food.spice + " " + Faker::Music.unique.instrument, price: Faker::Number.decimal(2), description: Faker::Company.bs)
+  product = Product.create!(name: Faker::Music.unique.instrument, price: Faker::Number.decimal(2), description: Faker::Company.bs)
     3.times do |index|
       product.reviews.create(author: Faker::Name.name, content: Faker::ChuckNorris.fact, rating: Faker::Number.between(1,5))
     end
