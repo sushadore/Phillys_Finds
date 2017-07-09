@@ -1,24 +1,31 @@
-# README
+# Philly's Finds
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails code review for Epicodus
 
-Things you may want to cover:
 
-* Ruby version
+#### Description
+Saves products and associated reviews using one-to-many relationships, user authentication and admin authorization.
 
-* System dependencies
+## Requirements
+  * Ruby
+  * Rails
+  * Active Record
+  * Postgres
 
-* Configuration
+## Setup
 
-* Database creation
+  * `git clone https://github.com/sushadore/Phillys_Finds.git`
+  * `cd Phillys_Finds`
+  * Start Postgres server
+  * `rake db:create`
+  * `rake db:migrate`
+  * `rake db:seed`
+  * `rails s`
+  * Open browser and navigate to http://localhost:3000/
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Technologies
+Ruby on Rails, Active Record, Postgres, HTML, CSS, Bootstrap
+## Author
+Susha Dore 7.7.2017
+## Legal
+MIT License

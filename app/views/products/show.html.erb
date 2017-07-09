@@ -18,7 +18,11 @@
 <% else %>
   <p>There are no reviews yet!</p>
 <% end %>
-<h4><%= link_to "Review Product", new_product_review_path(@product) %></h4>
+<% if current_user %>
+  <h4><%= link_to "Review Product", new_product_review_path(@product) %></h4>
+<% else %>
+  <h4>You must be signed in to leave a review</h4>
+<% end %>
 <%= link_to "Edit Product", edit_product_path(@product) %> |
 <%= link_to "Delete Product", product_path(@product),
                          :data => {:confirm => "Confirm Product Deletion!",
