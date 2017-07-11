@@ -11,14 +11,14 @@ class AdminsController < ApplicationController
       session[:admin_id] = @admin.id
       redirect_to products_path
     else
-      flash[:alert] = "There was a problem signing up."
-      redirect_to '/signup'
+      flash[:alert] = "There was a problem creating your account."
+      redirect_to '/admin_signup'
     end
   end
 
   private
 
   def admin_params
-    params.require(:admin).permit(:email, :password_confirmation)
+    params.require(:admin).permit(:email, :password, :password_confirmation)
   end
 end

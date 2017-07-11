@@ -1,10 +1,12 @@
+<% if !current_user && !current_admin%>
+  <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
+<% elsif current_user %>
+  <%= current_user.username %> | <%= link_to "Sign out", '/signout' %>
+<% else %>
+<% end %>
 <h3>Product List:</h3>
 <% @products.each do |product| %>
   <ul>
     <li><%= link_to product.name, product_path(product) %></li>
   </ul>
 <% end %>
-<footer class="footer">
-  <hr>
-  <%= link_to "Admin", new_product_path %>
-</footer>

@@ -7,8 +7,13 @@ Rails.application.routes.draw do
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
 
+  get '/admins' => 'admins#index'
   get '/admin_signup' => 'admins#new'
-  get '/admin_signup' => 'admins#create'
+  post '/admins' => 'admins#create'
+
+  get '/admin_signin' => 'admin_sessions#new'
+  post '/admin_signin' => 'admin_sessions#create'
+  get '/admin_signout' => 'admin_sessions#destroy'
 
   resources :products do
     resources :reviews, except: [:show, :index]
