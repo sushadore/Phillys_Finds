@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :product do
     name 'Irish Flute'
     description 'Delighfully fluttery'
-    cost '38.99'
+    price '38.99'
   end
 
   factory :review do

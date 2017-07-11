@@ -5,21 +5,6 @@
 
       ],
       "/Users/sushadore/Desktop/Phillys_Finds/spec/features/add_review_spec.rb": [
-
-      ],
-      "/Users/sushadore/Desktop/Phillys_Finds/spec/features/delete_product_spec.rb": [
-
-      ],
-      "/Users/sushadore/Desktop/Phillys_Finds/spec/features/delete_review_spec.rb": [
-
-      ],
-      "/Users/sushadore/Desktop/Phillys_Finds/spec/features/edit_product_spec.rb": [
-
-      ],
-      "/Users/sushadore/Desktop/Phillys_Finds/spec/features/sign_in_admin_spec.rb": [
-
-      ],
-      "/Users/sushadore/Desktop/Phillys_Finds/spec/features/sign_in_user_spec.rb": [
         1,
         null,
         1,
@@ -51,7 +36,9 @@
         1,
         1,
         1,
-        null,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -336,13 +323,13 @@
         1,
         null,
         1,
-        18,
-        12,
+        41,
+        33,
         null,
         null,
         null,
         1,
-        6,
+        15,
         0,
         null,
         null,
@@ -382,11 +369,11 @@
         1,
         null,
         1,
-        10,
+        14,
         null,
         null,
         1,
-        0,
+        3,
         null,
         null,
         1,
@@ -433,8 +420,18 @@
         1,
         null,
         1,
-        0,
-        0,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
         null,
         null,
         1,
@@ -443,20 +440,10 @@
         0,
         0,
         null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
         null,
         1,
         1,
-        0,
+        2,
         null,
         null
       ],
@@ -485,16 +472,16 @@
         1,
         null,
         1,
+        7,
+        null,
+        null,
+        1,
+        6,
+        6,
+        5,
+        5,
         5,
         null,
-        null,
-        1,
-        4,
-        4,
-        3,
-        3,
-        3,
-        null,
         1,
         1,
         null,
@@ -503,7 +490,7 @@
         1,
         null,
         1,
-        4,
+        6,
         null,
         null
       ],
@@ -569,8 +556,8 @@
         1,
         null,
         1,
-        9,
-        9,
+        11,
+        11,
         null,
         null,
         1,
@@ -618,6 +605,53 @@
         null,
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/sushadore/Desktop/Phillys_Finds/spec/features/delete_product_spec.rb": [
+
+      ],
+      "/Users/sushadore/Desktop/Phillys_Finds/spec/features/delete_review_spec.rb": [
+
+      ],
+      "/Users/sushadore/Desktop/Phillys_Finds/spec/features/edit_product_spec.rb": [
+
+      ],
+      "/Users/sushadore/Desktop/Phillys_Finds/spec/features/sign_in_admin_spec.rb": [
+
+      ],
+      "/Users/sushadore/Desktop/Phillys_Finds/spec/features/sign_in_user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -695,6 +729,6 @@
         null
       ]
     },
-    "timestamp": 1499804242
+    "timestamp": 1499804598
   }
 }
