@@ -31,6 +31,6 @@ describe "add product path" do
     click_on 'Create Admin'
     click_on 'Add Product'
     click_on 'Create Product'
-  expect(page).to have_content 'errors'
-end
+    expect(page).to have_content 'errors'
+  end
 end

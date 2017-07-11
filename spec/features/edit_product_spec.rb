@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "edit product path" do
   it "edits product detail" do
-    product = FactoryGirl.create(:product)
+    product = FactoryGirl.create :product
     visit product_path(product)
     click_on 'Admin'
     click_on 'Sign Up'
@@ -10,7 +10,7 @@ describe "edit product path" do
     fill_in 'Password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
     click_on 'Create Admin'
-    click_on 'Irish Flute'
+    click_on product.name
     click_on 'Edit Product'
     fill_in 'Name', with: 'Piccolo'
     click_on 'Update Product'
@@ -18,7 +18,7 @@ describe "edit product path" do
   end
 
   it "edits product detail" do
-    product = FactoryGirl.create(:product)
+    product = FactoryGirl.create :product
     visit product_path(product)
     click_on 'Admin'
     click_on 'Sign Up'
@@ -26,7 +26,7 @@ describe "edit product path" do
     fill_in 'Password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
     click_on 'Create Admin'
-    click_on 'Irish Flute'
+    click_on product.name
     click_on 'Edit Product'
     fill_in 'Name', with: ''
     click_on 'Update Product'

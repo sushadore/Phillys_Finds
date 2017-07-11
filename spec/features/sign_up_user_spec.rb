@@ -13,7 +13,7 @@ describe "user sign up path" do
     expect(page).to have_content "You've successfully signed up!"
   end
 
-  it "creates and signs in a new user" do
+  it "returns errors if sign up is not successful" do
     visit products_path
     click_on 'Sign up'
     fill_in 'Email', with: 'somemail@mail.com'
