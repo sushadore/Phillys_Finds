@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "sign up user path" do
+describe "user sign up path" do
   it "creates and signs in a new user" do
     visit products_path
     click_on 'Sign up'
