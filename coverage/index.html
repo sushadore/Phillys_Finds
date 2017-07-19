@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-11T14:49:16-07:00">2017-07-11T14:49:16-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-11T14:49:47-07:00">2017-07-11T14:49:47-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -933,7 +933,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  helper_method :current_admin</code>
+          <code class="ruby">  helper_method :current_user.admin</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -981,7 +981,7 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">  def current_admin</code>
+          <code class="ruby">  def current_user.admin</code>
         </li>
       
         <li class="covered" data-hits="169" data-linenumber="13">
@@ -993,7 +993,7 @@
         <li class="covered" data-hits="79" data-linenumber="14">
           <span class="hits">79</span>
           
-          <code class="ruby">      @current_admin ||= Admin.find(session[:admin_id])</code>
+          <code class="ruby">      @current_user.admin ||= Admin.find(session[:admin_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">

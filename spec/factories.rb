@@ -12,4 +12,12 @@ FactoryGirl.define do
     rating '4'
     product_id 1
   end
+
+  factory :user do
+    email 'somemail@email.com'
+    username 'ThisGuy'
+    password 'password'
+    password_confirmation 'password'
+    admin false
+  end
 end

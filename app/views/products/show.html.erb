@@ -1,22 +1,20 @@
-<% if current_admin %>
-   <%= current_admin.email %> | <%= link_to "Sign out", '/admin_signout' %>
- <% elsif current_user%>
+<% if current_user%>
   <%= current_user.username %> | <%= link_to "Sign out", '/signout' %>
+<% else %>
+  <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
 <% end %>
 
 <h2><%= @product.name %></h2>
-<h4>Price: $<%= @product.price %></h4>
-<h4>Description: <%= @product.description %></h4>
+<h4><%= @product.description %> - $<%= @product.price %></h4>
 
 <% if @product.reviews.any? %>
 <h4>Customer Reviews:</h4>
   <ul>
     <% @product.reviews.each do |review| %>
       <li>
-        <%= review.author %>,
-        <%= review.content %>
-        <%= review.rating %>
-        <% if current_admin %>
+        <%= review.content %> <strong><%= review.rating %> stars</strong> - <%= review.author %>
+
+        <% if admin %>
           <%= link_to "Delete Review", product_review_path(@product, review), :data => {:confirm => "Confirm Review Deletion!", :method => "delete"} %>
         <% end %>
       </li>
@@ -25,21 +23,12 @@
 <% else %>
   <p>There are no reviews yet!</p>
 <% end %>
-<% if !current_user && !current_admin%>
-<h4>You must be <%= link_to "signed in", '/' %> to leave a review</h4>
-<% elsif current_user %>
-  <h4><%= link_to "Review Product", new_product_review_path(@product) %></h4>
-<% else %>
-<% end %>
 
-<% if current_admin %>
-<%= link_to "Edit Product", edit_product_path(@product) %> |
-<%= link_to "Delete Product", product_path(@product),
-                         :data => {:confirm => "Confirm Product Deletion!",
-                                   :method => "delete"} %>
+<% if !current_user %>
+  <h4>You must be signed in to leave a review</h4>
+<% elsif current_user && !admin %>
+  <h4><%= link_to "Review Product", new_product_review_path(@product) %></h4>
 <% end %>
-<% if !current_user && !current_admin%>
-<footer class="footer">
- <%= link_to "Admin", admins_path %>
-</footer>
+<% if admin %>
+  <%= link_to "Edit Product", edit_product_path(@product) %> | <%= link_to "Delete Product", product_path(@product), :data => {:confirm => "Confirm Product Deletion!", :method => "delete"} %>
 <% end %>

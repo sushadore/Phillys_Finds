@@ -8,7 +8,6 @@
 Product.destroy_all
 Review.destroy_all
 
-
 12.times do |index|
   product = Product.create!(name: Faker::Music.unique.instrument, price: Faker::Number.decimal(2), description: Faker::Company.bs)
     3.times do |index|

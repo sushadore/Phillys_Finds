@@ -10,16 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170709002312) do
+ActiveRecord::Schema.define(version: 20170718044438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "admins", force: :cascade do |t|
-    t.string "email"
-    t.string "password_hash"
-    t.string "password_salt"
-  end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -43,6 +37,9 @@ ActiveRecord::Schema.define(version: 20170709002312) do
     t.string "username"
     t.string "password_hash"
     t.string "password_salt"
+    t.boolean "admin", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
